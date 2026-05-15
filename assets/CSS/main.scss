@@ -1,0 +1,72 @@
+$background-color: #0d0d0d; // Un nero quasi assoluto
+$text-color: #e0e0e0;
+$primary-color: #c5a059; // Un oro spento o bronzo per i link (molto elegante)
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+
+/* Griglia stile Galleria Moderna */
+.button-grid-container {
+  padding: 40px 20px;
+  background-color: #252a2e; /* Il grigio scuro dello sfondo */
+  margin-top: -20px; /* Unisce la griglia all'immagine senza stacchi bianchi */
+}
+
+.modern-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opera {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.opera-img {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px; /* Bottoni alti e importanti */
+  background: #33383d; /* Colore bottone */
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s, background 0.3s;
+
+  &:hover {
+    background: #40464c;
+    transform: scale(1.02);
+  }
+}
+
+/* Per il cellulare: mette i bottoni uno sotto l'altro */
+@media (max-width: 600px) {
+  .modern-grid {
+    grid-template-columns: 1fr;
+  }
+}

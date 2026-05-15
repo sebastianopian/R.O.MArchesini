@@ -1,0 +1,248 @@
+---
+---
+
+@charset "utf-8";
+
+// Color scheme
+$dark-bg: #0f0f0f;
+$secondary-bg: #1a1a1a;
+$accent-color: #d4af37;
+$text-light: #ffffff;
+$text-secondary: #b0b0b0;
+
+// Typography
+$font-size-base: 16px;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$letter-spacing: 0.05em;
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Global Styles
+body {
+  background-color: $dark-bg;
+  color: $text-light;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing;
+  line-height: 1.6;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: lighten($accent-color, 10%);
+  }
+}
+
+// Navigation
+.site-nav {
+  background-color: $secondary-bg;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideInDown 0.6s ease-out;
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+
+    li {
+      margin: 0 2rem;
+
+      a {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.5rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-bottom-color: $accent-color;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero-content {
+  text-align: center;
+  padding: 6rem 2rem;
+  animation: fadeInUp 0.8s ease-out;
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: $text-secondary;
+    margin: 1rem 0 2rem 0;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Featured Section
+.featured-section {
+  padding: 4rem 2rem;
+  background-color: $secondary-bg;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-card {
+  background-color: $dark-bg;
+  border: 2px solid rgba($accent-color, 0.2);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out backwards;
+
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+
+  &:hover {
+    border-color: $accent-color;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba($accent-color, 0.2);
+
+    .card-icon {
+      font-size: 3rem;
+      transform: scale(1.1);
+    }
+
+    h3 {
+      color: $accent-color;
+    }
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid $accent-color;
+  color: $accent-color;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $dark-bg;
+  }
+
+  &--large {
+    padding: 1.2rem 3rem;
+    font-size: 1rem;
+  }
+}
+
+// Page Container
+.page-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .site-nav .nav-menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    li {
+      margin: 0.5rem;
+    }
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
