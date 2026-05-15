@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libri - GOCCE DI PUREZZA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* Contenitore principale (stile Mostre/Biografia/Contatti) */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      background: rgb(10, 15, 19);
+      border-radius: 1rem;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #e1ded3;
+      display: inline-block;
+      width: auto;
+      padding-bottom: 0.3rem;
+    }
+
+    .title-center {
+      text-align: center;
+    }
+
+    /* Sezione libro */
+    .book {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .book h3 {
+      font-size: 1.8rem;
+      margin: 1.5rem 0 1rem;
+      color: #e7e0d2;
+      border-left: 4px solid #dbd5c5;
+      padding-left: 1rem;
+      text-align: left;
+    }
+
+    .book-cover {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgb(25, 45, 57);
+      margin: 1rem auto;
+      display: block;
+      transition: transform 0.2s;
+    }
+
+    .book-cover:hover {
+      transform: scale(1.02);
+    }
+
+    .book-details {
+      background: rgb(17, 30, 37);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .book-details p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .book-details strong {
+      color: #e9e0cc;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .book h3 {
+        font-size: 1.4rem;
+      }
+      .book-cover {
+        max-width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="content">
+  <div class="title-center">
+    <h1>Libri</h1>
+  </div>
+
+  <div class="book">
+    <h3>GOCCE di PUREZZA</h3>
+    <img class="book-cover" src="../assets/images/libro2.jpeg" alt="Copertina - Gocce di Purezza">
+
+ <div class="book-details">
+      <p><strong>Gocce di Purezza</strong></p>
+      <p> 2023</p>
+      <p> espressioni di colore e riflessioni</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

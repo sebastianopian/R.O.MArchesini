@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOCCE DI PUREZZA - Riccardo</title>
+  <style>
+    /* RESET base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: hsl(0, 0%, 10%); /* colore di fallback se l'immagine non carica */
+    }
+
+    /* Sezione hero a tutta altezza */
+    .splash {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Overlay scuro per leggibilità */
+    .splash-overlay {
+      background: rgba(0, 0, 0, 0.5); /* leggermente più scuro per contrasto */
+      width: 100%;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .splash-title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .splash-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .splash-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn-box {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-box:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Testo sotto la foto */
+    .intro-text {
+      text-align: center;
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #eee;  /* più chiaro su sfondo scuro */
+    }
+
+    .intro-text p {
+      margin-bottom: 1rem;
+    }
+
+    /* per schermi piccoli */
+    @media (max-width: 640px) {
+      .splash-title {
+        font-size: 2rem;
+      }
+      .splash-subtitle {
+        font-size: 1.2rem;
+      }
+      .btn-box {
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="splash" style="background-image: url('assets/images/home.jpeg');">
+  <div class="splash-overlay">
+    <h1 class="splash-title">GOCCE DI PUREZZA</h1>
+    <p class="splash-subtitle">Riccardo: artista e scrittore</p>
+    <div class="splash-buttons">
+      <a href="opere.html" class="btn-box">Opere</a>
+      <a href="biografia.html" class="btn-box">Riccardo</a>
+      <a href="mostre.html" class="btn-box">Mostre</a>
+      <a href="contatti.html" class="btn-box">Contatti</a>
+    </div>
+  </div>
+</div>
+
+<div class="intro-text">
+  <p>
+    Amico per ogni espressione di colore una didascalia-riflessione.<br>
+    Grazie.<br>
+    R.
+  </p>
+</div>
+
+</body>
+</html>

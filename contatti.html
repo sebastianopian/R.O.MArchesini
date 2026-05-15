@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti - GOCCE DI PUREZZA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* Opzionale: sfondo video o immagine fisso (come in Mostre) */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-bg video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .video-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Contenuto principale (identico a Mostre) */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      background: rgb(26, 39, 53);
+      border-radius: 1rem;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      border-left: 4px solid #eee7d4;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      color: #eadfc9;
+    }
+
+    .info-block {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .info-block a {
+      color: #f1e5cd;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(241, 233, 215, 0.852);
+    }
+
+    .info-block a:hover {
+      border-bottom: 1px solid #ffdd99;
+    }
+
+    .social-links {
+      margin: 1rem 0;
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .social-links li {
+      margin: 0.5rem 0;
+    }
+
+    .social-links a {
+      color: #e6ddc9;
+      text-decoration: none;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+
+    .thanks {
+      text-align: center;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sfondo video (opzionale, come in Mostre). Se non vuoi video, commenta o elimina questo blocco -->
+<div class="video-bg">
+  <video autoplay muted loop playsinline>
+    <source src="../assets/video/contatti-bg.mp4" type="video/mp4">
+    <!-- Se non hai un video, usa un'immagine di fallback o lascia vuoto -->
+  </video>
+</div>
+
+<div class="content">
+  <h1>Contatti</h1>
+
+  <h2>Informazioni di Contatto</h2>
+  <div class="info-block">
+    <strong>Email:</strong> <a href="mailto:tua-email@example.com">tua-email@example.com</a>
+  </div>
+
+  <h2>Social Media</h2>
+  <ul class="social-links">
+    <li><a href="#" target="_blank">Facebook</a> (link da inserire)</li>
+    <!-- Aggiungi altri social qui -->
+  </ul>
+
+  <h2>Collaborazioni</h2>
+  <div class="info-block">
+    Sono disponibile per:
+    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+      <li>Mostre ed esposizioni</li>
+      <li>Progetti artistici</li>
+      <li>Incontri e conferenze</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="thanks">
+    Grazie per il tuo interesse nel mio lavoro
+  </div>
+</div>
+
+</body>
+</html>

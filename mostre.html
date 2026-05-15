@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostre - GOCCE DI PUREZZA</title>
+  <style>
+    /* Reset base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;  /* fallback */
+      font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* Video di sfondo fisso */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-bg video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    /* Overlay scuro per leggibilità */
+    .video-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contenuto principale */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      background: rgba(0, 0, 0, 0.5);  /* leggero fondo semitrasparente */
+      border-radius: 1rem;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      border-left: 4px solid #e5dfcc;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      color: #e3d7c0;
+    }
+
+    .evento {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 1rem;
+    }
+
+    .evento strong {
+      color: #e8dcc4;
+      font-size: 1.2rem;
+    }
+
+    .dettagli {
+      margin-top: 0.3rem;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+
+    .contatti-menzione {
+      text-align: center;
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #dbdbca;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-bg">
+  <video autoplay muted loop playsinline>
+    <!-- 
+      IMPORTANTE: sostituisci il percorso con il tuo file video.
+      Se il video è in assets/video/mostre-bg.mp4, ok.
+      Altrimenti modifica il path qui sotto.
+    -->
+    <source src="../assets/images/mostre.mp4" type="video/mp4">
+    Il tuo browser non supporta il video HTML5.
+  </video>
+</div>
+
+<div class="content">
+  <h1>Mostre ed Esposizioni</h1>
+
+  <h2>Prossimi Eventi</h2>
+  <p><strong>In aggiornamento</strong></p>
+
+  <h2>Esposizioni Passate</h2>
+
+  <div class="evento">
+    <strong>GOCCE di PUREZZA: espressioni di colore e riflessioni</strong> — 2026<br>
+    <div class="dettagli">III Mostra personale</div>
+  </div>
+
+  <div class="evento">
+    <strong>Collettiva d'arte</strong> — 8–15 Dicembre 2024<br>
+    <div class="dettagli">Ceneda, Vittorio Veneto (TV)<br>Collettiva d'arte</div>
+  </div>
+
+  <div class="evento">
+    <strong>35° Concorso di pittura</strong> — 2–17 Novembre 2024<br>
+    <div class="dettagli">Cordignano (TV)<br>35° Concorso di pittura di Cordignano</div>
+  </div>
+
+  <div class="evento">
+    <strong>IL LINGUAGGIO DEL COLORE</strong> — 20 Aprile – 5 Maggio 2024<br>
+    <div class="dettagli">Villa Onigo di Trevignano (TV)<br>2° Mostra personale</div>
+  </div>
+
+  <div class="evento">
+    <strong>COLLETTIVA D'ARTE</strong> — 8–17 Dicembre 2023<br>
+    <div class="dettagli">Ceneda, Vittorio Veneto (TV)<br>Collettiva d'arte</div>
+  </div>
+
+  <div class="evento">
+    <strong>Pillole di energia</strong> — Agosto 2023<br>
+    <div class="dettagli">Pubblicazione II° libretto "Pillole di energia"</div>
+  </div>
+
+  <div class="evento">
+    <strong>IL LINGUAGGIO DEL COLORE</strong> — Marzo 2023<br>
+    <div class="dettagli">Feltre (BL)<br>Incontro con i ragazzi della Scuola Paritaria di Feltre</div>
+  </div>
+
+  <div class="evento">
+    <strong>Mostra personale: Pillole di luce</strong> — 28 Maggio – 5 Giugno 2022<br>
+    <div class="dettagli">Villa Onigo di Trevignano (TV)<br>Mostra personale e presentazione libretto "Pillole di luce"</div>
+  </div>
+
+  <div class="evento">
+    <strong>32° Concorso di pittura</strong> — 6–21 Novembre 2021<br>
+    <div class="dettagli">Cordignano (TV)<br>32° Concorso di pittura</div>
+  </div>
+
+  <hr>
+
+  <div class="contatti-menzione">
+    Contattami per opportunità di esposizione e collaborazione<br>
+  <a href="../contatti.html" class="btn-box">Contatti</a> 
+  </div>
+</div>
+
+</body>
+</html>

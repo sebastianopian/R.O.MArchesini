@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipinti - GOCCE DI PUREZZA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0e1218;
+      font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* Contenitore principale (come nelle altre pagine) */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      background: rgba(14, 18, 22, 0.65);
+      border-radius: 1rem;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #d8d2be;
+      display: inline-block;
+      width: auto;
+      padding-bottom: 0.3rem;
+    }
+
+    .title-center {
+      text-align: center;
+    }
+
+    /* Singola opera */
+    .opera {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 2rem;
+    }
+
+    .opera:last-child {
+      border-bottom: none;
+    }
+
+    .opera h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d5c9b2;
+      border-left: 4px solid #cec6ad;
+      padding-left: 1rem;
+    }
+
+    /* Immagine singola */
+    .opera-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .opera-img:hover {
+      transform: scale(1.01);
+    }
+
+    /* Riga per due immagini affiancate */
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .gallery-row .opera-img {
+      flex: 1 1 250px;
+      max-width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .content {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .opera h3 {
+        font-size: 1.4rem;
+      }
+      .gallery-row {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="content">
+  <div class="title-center">
+    <h1>Dipinti</h1>
+  </div>
+
+  <div class="opera">
+    <h3>L'eleganza delle calle</h3>
+    <img class="opera-img" src="../assets/images/L_eleganza_delle_calle.jpeg" alt="L'eleganza delle calle">
+  </div>
+
+  <div class="opera">
+    <h3>Viale dei pioppi</h3>
+    <img class="opera-img" src="../assets/images/Viale_dei_pioppi.jpeg" alt="Viale dei pioppi">
+  </div>
+
+  <div class="opera">
+    <h3>Le spighe, Passione</h3>
+    <div class="gallery-row">
+      <img class="opera-img" src="../assets/images/Le_spighe.jpeg" alt="Le spighe">
+      <img class="opera-img" src="../assets/images/Passione.jpeg" alt="Passione">
+    </div>
+  </div>
+
+  <div class="opera">
+    <h3>I girasoli</h3>
+    <img class="opera-img" src="../assets/images/I_girasoli.jpeg" alt="I girasoli">
+  </div>
+
+  <div class="opera">
+    <h3>Solitudine</h3>
+    <img class="opera-img" src="../assets/images/Solitudine.jpeg" alt="Solitudine">
+  </div>
+
+  <div class="opera">
+    <h3>Il desiderio</h3>
+    <img class="opera-img" src="../assets/images/Il_desiderio.jpeg" alt="Il desiderio">
+  </div>
+
+  <div class="opera">
+    <h3>L'esilio</h3>
+    <img class="opera-img" src="../assets/images/L_esilio.jpeg" alt="L'esilio">
+  </div>
+</div>
+
+</body>
+</html>

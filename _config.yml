@@ -1,0 +1,17 @@
+title: "Galleria R. O. Marchesini"
+description: "Contemporary Artist"
+url: "https://.github.io"
+baseurl: "/R.O.Marchesini"
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+header_pages:
+  - opere.md
+  - biografia.md
+  - mostre.md
+  - contatti.md
+author:
+  name: "Pian Sebastiano"
+markdown: kramdown
